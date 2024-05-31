@@ -1,3 +1,4 @@
+import 'package:calculator_flutter/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
 void main()
@@ -12,27 +13,10 @@ class CalculatorApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       theme: ThemeData.dark(),
-      home: Scaffold(
-        backgroundColor: Colors.black,
-        appBar: AppBar(
-          title: const Text("Calculator App"),
-          backgroundColor: Colors.black,
-        ),
-        body: Column(
-          children: [Padding(
-            padding: EdgeInsets.symmetric(horizontal: 25, vertical: 30),
-            child: TextField(
-              decoration: InputDecoration(
-                border: InputBorder.none
-              ),
-              style: TextStyle(fontSize: 45),
-
-            ),
-          )
-          ],
-          ),
-        ),
-      ),
-    );
+      debugShowCheckedModeBanner: false,
+      // ignore: unnecessary_const
+      home: const HomeScreen(), 
+      );
   }
 }
+
